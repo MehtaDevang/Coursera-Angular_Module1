@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <title>LunchCheck Angular App</title>
+  </head>
+  <body ng-app="LunchCheck">
+    <h1>LunchCheck App</h1>
+    <div ng-controller="LunchCheckController">
+      <div>
+        Enter Comma Seperated Items:
+        <input ng-model="food" type="text" />
+        <button class="btn btn-info" ng-click="checkLunch()">
+          Check If Too Much
+        </button>
+      </div>
+      <div>
+        <p>{{message}}</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="node_modules/angular"></script>
+  <script src="node_modules/angular-route"></script>
+  <script src="node_modules/angular-ui-router"></script>
+  <script src="node_modules/jquery-ui"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="node_modules/angular-bootstrap"></script>
+  <script src="node_modules/angular-smart-table"></script>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+</html>
