@@ -22,6 +22,26 @@
         <p>{{message}}</p>
       </div>
     </div>
+
+    <h2>My Shopping List</h2>
+    <div ng-controller="ItemAdderController as itemAdder">
+      Item Name: <input type="text" ng-model="itemAdder.itemName" /> Quantity:
+      <input type="number" ng-model="itemAdder.itemQuantity" />
+      <button class="btn btn-success" ng-click="itemAdder.addItem()">
+        Add
+      </button>
+    </div>
+    <div ng-controller="ListShowController as showList">
+      <span>The items in your list are:</span>
+      <ul ng-repeat="item in showList.items">
+        <li>
+          {{ item.name }} - {{item.quantity}}
+          <button ng-click="showList.removeItem($index)">
+            Delete Item
+          </button>
+        </li>
+      </ul>
+    </div>
   </body>
 
   <script src="node_modules/angular"></script>
